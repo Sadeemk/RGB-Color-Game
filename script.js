@@ -9,7 +9,6 @@ let h1 = document.querySelector("h1");
 let resetButton = document.querySelector("#reset");
 let easyBtn = document.querySelector("#easyBtn");
 let hardBtn = document.querySelector("#hardBtn");
-let numOfSquares
 
 easyBtn.addEventListener("click", function(){
 	easyBtn.classList.add("selected");
@@ -27,15 +26,12 @@ easyBtn.addEventListener("click", function(){
 			squares[i].style.display = "none"
 		}
 	}
-
-
 });
 
 hardBtn.addEventListener("click", function(){
 	easyBtn.classList.remove("selected");
 	hardBtn.classList.add("selected");
 	numSquares = 6;
-
 
 	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
@@ -61,7 +57,7 @@ resetButton.addEventListener("click", function(){
 	for (let i = 0; i < squares.length; i++){
 		squares[i].style.background = colors[i];
 	}
-	h1.style.background = "#232323";
+	h1.style.background = "steelblue";
 });
 
 
